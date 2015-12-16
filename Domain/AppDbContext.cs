@@ -20,6 +20,16 @@ namespace Domain
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Address>().ToTable("Common.Address");
+            modelBuilder.Entity<ActiveStatus>().ToTable("Beholder.ActiveStatus");
+            modelBuilder.Entity<AddressChapterRel>().ToTable("Beholder.AddressChapterRel");
+            modelBuilder.Entity<AddressType>().ToTable("Common.AddressType");
+            modelBuilder.Entity<ApprovalStatus>().ToTable("Beholder.ApprovalStatus");
+            modelBuilder.Entity<Chapter>().ToTable("Beholder.Chapter");
+            modelBuilder.Entity<ChapterType>().ToTable("Beholder.ChapterType");
+            modelBuilder.Entity<ConfidentialityType>().ToTable("Beholder.ConfidentialityType");
+            modelBuilder.Entity<MovementClass>().ToTable("Beholder.MovementClass");
+            modelBuilder.Entity<RemovalStatus>().ToTable("Beholder.RemovalStatus");
+            modelBuilder.Entity<State>().ToTable("Common.State");
 
             //modelBuilder.Entity<Address>()
             //    .Property(e => e.Address1)

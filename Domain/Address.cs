@@ -2,8 +2,7 @@ using System.Collections.Generic;
 
 namespace Domain
 {
-    //[Table("Address", Schema = "Common")]
-    public class Address
+    public class Address : BaseEntity
     {
         public int Id { get; set; }
         public string Address1 { get; set; }
