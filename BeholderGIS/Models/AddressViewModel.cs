@@ -3,6 +3,7 @@ using BeholderGIS.Infrastructure;
 using Domain;
 using System;
 using System.Linq;
+using System.Text;
 
 namespace BeholderGIS.Models
 {
@@ -37,9 +38,12 @@ namespace BeholderGIS.Models
         {
             config.CreateMap<Address, AddressViewModel>()
                 .ForMember(d => d.StateCode, opt => opt.MapFrom(s => s.State.StateCode)).ReverseMap();
-
-
-
         }
+
+
+        //public static String StripUnicodeCharactersFromString(string inputValue)
+        //{
+        //    return Encoding.ASCII.GetString(Encoding.Convert(Encoding.UTF8, Encoding.GetEncoding(Encoding.ASCII.EncodingName, new EncoderReplacementFallback(String.Empty), new DecoderExceptionFallback()), Encoding.UTF8.GetBytes(inputValue)));
+        //}
     }
 }
